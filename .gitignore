@@ -1,0 +1,13 @@
+.*
+*.o
+*.so
+*.exe
+*.dll
+perf*
+
+firmware/build
+gui/imgui.ini
+gui/stmdspgui
+gui/stmdspgui.exe
+hardware/*-backups
+hardware/*.kicad_prl

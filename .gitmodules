@@ -1,0 +1,16 @@
+[submodule "firmware/ChibiOS"]
+	path = firmware/ChibiOS
+	url = https://github.com/ChibiOS/ChibiOS
+	branch = stable_20.3.x
+[submodule "gui/source/serial"]
+	path = gui/source/serial
+	url = https://www.github.com/wjwwood/serial
+[submodule "gui/source/imgui"]
+	path = gui/source/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "gui/source/ImGuiFileDialog"]
+	path = gui/source/ImGuiFileDialog
+	url = https://github.com/aiekick/ImGuiFileDialog
+[submodule "gui/source/ImGuiColorTextEdit"]
+	path = gui/source/ImGuiColorTextEdit
+	url = https://github.com/BalazsJako/ImGuiColorTextEdit

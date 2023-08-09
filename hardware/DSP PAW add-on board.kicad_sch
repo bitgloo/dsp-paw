@@ -1,0 +1,98 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid c291319b-d76e-4fda-91cc-061acff65f9f)
+
+  (paper "A4")
+
+  (title_block
+    (title "DSP PAW add-on board")
+    (date "2023-08-08")
+    (company "bitgloo")
+    (comment 1 "Released under the CERN Open Hardware Licence Version 2 - Strongly Reciprocal")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 25.4 76.2) (size 50.8 12.7) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 270d19d2-3af2-41db-ad1c-33373417ec82)
+    (property "Sheetname" "Board connectors" (at 25.4 75.4884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "board_connectors.kicad_sch" (at 25.4 89.4846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (property "Field2" "" (at 25.4 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 25.4 25.4) (size 50.8 12.7) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 684072e7-f538-4528-bfb8-b14c31b5b1f0)
+    (property "Sheetname" "Analog IO" (at 25.4 24.6884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "analog_io.kicad_sch" (at 25.4 38.6846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (property "Field2" "" (at 25.4 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 25.4 101.6) (size 50.8 12.7) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 7798c5d5-f9b1-4b2e-811c-a15abcd34bfa)
+    (property "Sheetname" "User IO" (at 25.4 100.8884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "user_io.kicad_sch" (at 25.4 114.8846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f" (page "5"))
+      )
+    )
+  )
+
+  (sheet (at 25.4 50.8) (size 50.8 12.7) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 97fc232a-dbc7-49da-a6a0-e33e9aacbabd)
+    (property "Sheetname" "Power regulation" (at 25.4 50.0884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "power_regulation.kicad_sch" (at 25.4 64.0846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (property "Field2" "" (at 25.4 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f" (page "3"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
