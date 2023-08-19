@@ -9,6 +9,7 @@ firmware/build
 gui/imgui.ini
 gui/stmdspgui
 gui/stmdspgui.exe
+hardware/production
 hardware/fp-info-cache
 hardware/*-backups
 hardware/*.kicad_prl
