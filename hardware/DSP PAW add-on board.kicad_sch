@@ -6,13 +6,14 @@
 
   (title_block
     (title "DSP PAW add-on board")
-    (date "2023-08-18")
+    (date "2023-08-19")
     (company "bitgloo")
     (comment 1 "Released under the CERN Open Hardware Licence Version 2 - Strongly Reciprocal")
   )
 
   (lib_symbols
   )
+
 
 
   (text "Bill of Materials notes:\n\nManufacturer part numbers were chosen first, and are preferred. LCSC part numbers\ncontain many substitutions that were chosen to match the original components as\nbest as possible:\n\n  - Capacitor choices are X5R or X7R, +/- 10% tolerance or better, and rated 16V\n    or higher.\n  - MAX6106 reference replaced with REF3020.\n  - TLV9162 replaced with LM833 (used in previous design iteration).\n  - 10kOhm potentiometers replaced with 100kOhm versions."
