@@ -157,7 +157,7 @@ void deviceRenderToolbar()
     if (!enable)
         ImGui::PushDisabled();
 
-    if (ImGui::BeginCombo("", sampleRatePreview.c_str())) {
+    if (ImGui::BeginCombo("##", sampleRatePreview.c_str())) {
         extern std::array<unsigned int, 6> sampleRateInts;
 
         for (const auto& r : sampleRateInts) {
@@ -217,7 +217,7 @@ void deviceRenderWidgets()
             ImGui::Text(siggenOption == 0 ? "Enter a list of numbers:"
                                           : "Enter a formula. x = sample #, y = -1 to 1.\nf(x) = ");
             ImGui::PushStyleColor(ImGuiCol_FrameBg, {.8, .8, .8, 1});
-            ImGui::InputText("", siggenInput.data(), siggenInput.size());
+            ImGui::InputText("##", siggenInput.data(), siggenInput.size());
             ImGui::PopStyleColor();
         }
 
@@ -249,7 +249,7 @@ void deviceRenderWidgets()
         static std::string bufferSizeInput ("4096");
         ImGui::Text("Please enter a new sample buffer size (100-4096):");
         ImGui::PushStyleColor(ImGuiCol_FrameBg, {.8, .8, .8, 1});
-        ImGui::InputText("",
+        ImGui::InputText("##",
             bufferSizeInput.data(),
             bufferSizeInput.size(),
             ImGuiInputTextFlags_CharsDecimal);
@@ -308,7 +308,7 @@ void deviceRenderDraw()
         ImGui::Begin("draw", &drawSamples);
         ImGui::Text("Draw input ");
         ImGui::SameLine();
-        if (ImGui::Checkbox("", &drawSamplesInput)) {
+        if (ImGui::Checkbox("##", &drawSamplesInput)) {
             deviceSetInputDrawing(drawSamplesInput);
             if (drawSamplesInput) {
                 bufferCirc.reset(2048);
