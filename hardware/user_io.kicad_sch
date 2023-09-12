@@ -577,6 +577,58 @@
         )
       )
     )
+    (symbol "power:VDDA" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "VDDA" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"VDDA\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "VDDA_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "VDDA_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "VDDA" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
   )
 
 
@@ -672,9 +724,6 @@
     (property "DNP" "" (at 193.04 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC Part #" "C330458" (at 193.04 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (pin "1" (uuid 5468099e-cb95-4972-9078-30e43b094d04))
     (pin "2" (uuid 0de265c9-fa60-41cd-b5c8-3b2982f1e4cf))
     (pin "3" (uuid 8d22e474-522c-442d-84f9-4d3795fa75e1))
@@ -690,39 +739,6 @@
         )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
           (reference "RV2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 193.04 102.87 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 0b7ce666-6cbf-4100-957e-48b86848c1c6)
-    (property "Reference" "#PWR056" (at 193.04 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 193.04 97.79 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 193.04 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 193.04 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4d67f819-24dd-4ed0-ae73-b63ed362a7b4))
-    (instances
-      (project "stmdsp_rev3"
-        (path "/975c3983-57e7-4e06-a697-831e5209dd80"
-          (reference "#PWR056") (unit 1)
-        )
-      )
-      (project "DSP PAW add-on board"
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/270d19d2-3af2-41db-ad1c-33373417ec82"
-          (reference "#PWR027") (unit 1)
-        )
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
-          (reference "#PWR068") (unit 1)
         )
       )
     )
@@ -747,9 +763,6 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "DNP" "" (at 92.71 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC Part #" "C23350" (at 92.71 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bc61001a-9375-4494-bd53-b146b8cbbfcd))
@@ -799,6 +812,42 @@
         )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
           (reference "#PWR070") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VDDA") (at 193.04 102.87 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 450b5527-3170-4432-a030-67a83634346a)
+    (property "Reference" "#PWR013" (at 193.04 106.68 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VDDA" (at 193.04 97.79 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 193.04 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 193.04 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b5a48a38-32d1-49a1-9103-f4d460b8aacf))
+    (instances
+      (project "stmdsp_rev3"
+        (path "/975c3983-57e7-4e06-a697-831e5209dd80"
+          (reference "#PWR013") (unit 1)
+        )
+      )
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/270d19d2-3af2-41db-ad1c-33373417ec82"
+          (reference "#PWR033") (unit 1)
+        )
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
+          (reference "#PWR024") (unit 1)
+        )
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
+          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -858,9 +907,6 @@
     (property "DNP" "" (at 92.71 113.665 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC Part #" "C23204" (at 92.71 113.665 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (pin "1" (uuid 261550e6-b14d-4948-b24c-2c241f5f4547))
     (pin "2" (uuid dd48f3e0-3f5d-46bd-85da-f4476fc2bdae))
     (instances
@@ -875,39 +921,6 @@
         )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
           (reference "R23") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VCC") (at 149.86 102.87 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 881d1958-8c2a-4d5a-827d-7379482ba809)
-    (property "Reference" "#PWR055" (at 149.86 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VCC" (at 149.86 97.79 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 149.86 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 149.86 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 3f92816b-1cb9-4f48-9c32-7731fb5014e6))
-    (instances
-      (project "stmdsp_rev3"
-        (path "/975c3983-57e7-4e06-a697-831e5209dd80"
-          (reference "#PWR055") (unit 1)
-        )
-      )
-      (project "DSP PAW add-on board"
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/270d19d2-3af2-41db-ad1c-33373417ec82"
-          (reference "#PWR023") (unit 1)
-        )
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
-          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -932,9 +945,6 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "DNP" "" (at 105.41 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC Part #" "C427425" (at 105.41 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 363fad31-16fa-4be8-b5d2-c004f7616847))
@@ -971,9 +981,6 @@
     (property "DNP" "" (at 92.71 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC Part #" "C23350" (at 92.71 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (pin "1" (uuid 58518da9-c923-45a5-928d-33b164e619f0))
     (pin "2" (uuid 55ad7eab-6366-4c1f-aa56-1782827f3e8e))
     (instances
@@ -988,6 +995,42 @@
         )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
           (reference "R25") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VDDA") (at 149.86 102.87 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid e55c0f19-dc2f-4497-b186-ba295a9f4d28)
+    (property "Reference" "#PWR013" (at 149.86 106.68 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VDDA" (at 149.86 97.79 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 149.86 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 149.86 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 71f96073-9756-4382-b037-31caa84bf970))
+    (instances
+      (project "stmdsp_rev3"
+        (path "/975c3983-57e7-4e06-a697-831e5209dd80"
+          (reference "#PWR013") (unit 1)
+        )
+      )
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/270d19d2-3af2-41db-ad1c-33373417ec82"
+          (reference "#PWR033") (unit 1)
+        )
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
+          (reference "#PWR024") (unit 1)
+        )
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
+          (reference "#PWR054") (unit 1)
         )
       )
     )
@@ -1045,9 +1088,6 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "DNP" "" (at 149.86 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "LCSC Part #" "C330458" (at 149.86 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1a649be3-376f-4b5d-81c4-a51773e11622))
