@@ -1,6 +1,8 @@
 CXX = g++
 
 CXXFILES := \
+    kissfft/kiss_fft.c \
+    kissfft/kiss_fftr.c \
     source/serial/src/serial.cc \
     source/imgui/backends/imgui_impl_sdl2.cpp \
     source/imgui/backends/imgui_impl_opengl2.cpp \
@@ -13,7 +15,8 @@ CXXFILES := \
     $(wildcard source/stmdsp/*.cpp) \
     $(wildcard source/*.cpp)
 
-CXXFLAGS := -std=c++20 -O2 \
+CXXFLAGS := -std=c++20 -Og -ggdb -g3 \
+	    -Ikissfft \
             -Isource -Isource/imgui -Isource/stmdsp -Isource/serial/include \
             -Isource/ImGuiColorTextEdit -Isource/ImGuiFileDialog \
             $(shell sdl2-config --cflags) \
@@ -32,7 +35,7 @@ LDFLAGS = $(shell sdl2-config --libs) -lGL -lpthread
 OUTPUT := stmdspgui
 endif
 
-OFILES := $(patsubst %.cc, %.o, $(patsubst %.cpp, %.o, $(CXXFILES)))
+OFILES := $(patsubst %.c, %.o, $(patsubst %.cc, %.o, $(patsubst %.cpp, %.o, $(CXXFILES))))
 
 all: $(OUTPUT)
 

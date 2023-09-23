@@ -14,3 +14,6 @@
 [submodule "gui/source/ImGuiColorTextEdit"]
 	path = gui/source/ImGuiColorTextEdit
 	url = https://github.com/BalazsJako/ImGuiColorTextEdit
+[submodule "gui/kissfft"]
+	path = gui/kissfft
+	url = https://github.com/mborgerding/kissfft

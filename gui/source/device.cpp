@@ -316,7 +316,7 @@ bool deviceConnect()
     return false;
 }
 
-void deviceStart(bool logResults, bool drawSamples)
+void deviceStart(bool fetchSamples)
 {
     if (!m_device) {
         log("No device connected.");
@@ -336,7 +336,7 @@ void deviceStart(bool logResults, bool drawSamples)
         log("Ready.");
     } else {
         m_device->continuous_start();
-        if (drawSamples || logResults || wavOutput.valid())
+        if (fetchSamples || wavOutput.valid())
             std::thread(drawSamplesTask, m_device).detach();
 
         log("Running.");
