@@ -6,7 +6,7 @@
 
   (title_block
     (title "DSP PAW add-on board")
-    (date "2023-09-04")
+    (date "2023-09-13")
     (rev "2")
     (company "bitgloo")
     (comment 1 "Released under the CERN Open Hardware Licence Version 2 - Strongly Reciprocal")
@@ -485,6 +485,58 @@
         )
       )
     )
+    (symbol "power:+3V3" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+3V3" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+3V3\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+3V3_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+3V3_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+3V3" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -573,58 +625,6 @@
       (symbol "VCC_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
           (name "VCC" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:VDDA" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "VDDA" (at 0 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"VDDA\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "VDDA_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "VDDA_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "VDDA" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -817,42 +817,6 @@
     )
   )
 
-  (symbol (lib_id "power:VDDA") (at 193.04 102.87 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 450b5527-3170-4432-a030-67a83634346a)
-    (property "Reference" "#PWR013" (at 193.04 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VDDA" (at 193.04 97.79 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 193.04 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 193.04 102.87 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b5a48a38-32d1-49a1-9103-f4d460b8aacf))
-    (instances
-      (project "stmdsp_rev3"
-        (path "/975c3983-57e7-4e06-a697-831e5209dd80"
-          (reference "#PWR013") (unit 1)
-        )
-      )
-      (project "DSP PAW add-on board"
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/270d19d2-3af2-41db-ad1c-33373417ec82"
-          (reference "#PWR033") (unit 1)
-        )
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
-          (reference "#PWR024") (unit 1)
-        )
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
-          (reference "#PWR067") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:GND") (at 193.04 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 50eee7b6-f7e8-49f5-a03a-3e57c0517f9c)
@@ -921,6 +885,34 @@
         )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
           (reference "R23") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 149.86 102.87 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 71503ef2-9ff6-4528-93d1-41bfb21ef761)
+    (property "Reference" "#PWR024" (at 149.86 106.68 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 149.225 98.425 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 149.86 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 149.86 102.87 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 31e7d8c9-bef6-45b1-b652-383617931be4))
+    (instances
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
+          (reference "#PWR024") (unit 1)
+        )
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
+          (reference "#PWR077") (unit 1)
         )
       )
     )
@@ -1000,37 +992,29 @@
     )
   )
 
-  (symbol (lib_id "power:VDDA") (at 149.86 102.87 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e55c0f19-dc2f-4497-b186-ba295a9f4d28)
-    (property "Reference" "#PWR013" (at 149.86 106.68 0)
+  (symbol (lib_id "power:+3V3") (at 193.04 102.87 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ed87550a-fea6-41a6-acde-ab0b2118affc)
+    (property "Reference" "#PWR024" (at 193.04 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "VDDA" (at 149.86 97.79 0)
+    (property "Value" "+3V3" (at 192.405 98.425 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 149.86 102.87 0)
+    (property "Footprint" "" (at 193.04 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 149.86 102.87 0)
+    (property "Datasheet" "" (at 193.04 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 71f96073-9756-4382-b037-31caa84bf970))
+    (pin "1" (uuid 4bd61509-f210-4907-9795-d698befe7b36))
     (instances
-      (project "stmdsp_rev3"
-        (path "/975c3983-57e7-4e06-a697-831e5209dd80"
-          (reference "#PWR013") (unit 1)
-        )
-      )
       (project "DSP PAW add-on board"
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/270d19d2-3af2-41db-ad1c-33373417ec82"
-          (reference "#PWR033") (unit 1)
-        )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
           (reference "#PWR024") (unit 1)
         )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/7798c5d5-f9b1-4b2e-811c-a15abcd34bfa"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
     )
