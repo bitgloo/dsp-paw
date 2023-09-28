@@ -28,6 +28,7 @@ void codeEditorInit()
 {
     editor.SetLanguageDefinition(TextEditor::LanguageDefinition::CPlusPlus());
     editor.SetPalette(TextEditor::GetLightPalette());
+    editor.SetShowWhitespaces(false);
 }
 
 void codeRenderMenu()
