@@ -2,7 +2,7 @@
  * @file monitor.hpp
  * @brief Manages the device monitoring thread (status LEDs, etc.).
  *
- * Copyright (C) 2021 Clyne Sullivan
+ * Copyright (C) 2023 Clyne Sullivan
  *
  * Distributed under the GNU GPL v3 or later. You should have received a copy of
  * the GNU General Public License along with this program.
@@ -19,9 +19,15 @@
 class Monitor
 {
 public:
+    /**
+     * Starts the monitor thread.
+     */
     static void begin();
 
 private:
+    /**
+     * Updates status LEDs. Does not return.
+     */
     static void threadMonitor(void *);
 
     static std::array<char, THD_WORKING_AREA_SIZE(256)> m_thread_stack;

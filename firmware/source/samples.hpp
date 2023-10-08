@@ -2,7 +2,7 @@
  * @file samples.hpp
  * @brief Provides sample buffers for inputs and outputs.
  *
- * Copyright (C) 2021 Clyne Sullivan
+ * Copyright (C) 2023 Clyne Sullivan
  *
  * Distributed under the GNU GPL v3 or later. You should have received a copy of
  * the GNU General Public License along with this program.
@@ -14,6 +14,8 @@
 
 #include "samplebuffer.hpp"
 
+// Define sample buffers for the input and output signals and the signal
+// generator.
 class Samples
 {
 public:

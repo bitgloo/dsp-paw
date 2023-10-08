@@ -2,7 +2,7 @@
  * @file sclock.hpp
  * @brief Manages sampling rate clock speeds.
  *
- * Copyright (C) 2021 Clyne Sullivan
+ * Copyright (C) 2023 Clyne Sullivan
  *
  * Distributed under the GNU GPL v3 or later. You should have received a copy of
  * the GNU General Public License along with this program.
@@ -19,6 +19,7 @@
 class SClock
 {
 public:
+    // These are the supported sampling rates. GUI keeps its own enumeration.
     enum class Rate : unsigned int {
         R8K = 0,
         R16K,
@@ -28,11 +29,32 @@ public:
         R96K
     };
 
+    /**
+     * Initializes the sample clock hardware.
+     */
     static void begin();
+
+    /**
+     * Starts the sample rate clock if it is not already running.
+     */
     static void start();
+
+    /**
+     * Indicate that the caller no longer needs the sample clock.
+     * This decrements an internal counter that is incremented by start()
+     * calls; if the counter reaches zero, the clock will actually stop.
+     */
     static void stop();
 
+    /**
+     * Sets the desired sampling rate, used for the next start() call.
+     */
     static void setRate(Rate rate);
+
+    /**
+     * Gets the desired sampling rate (SClock::Rate value) casted to an
+     * unsigned int.
+     */
     static unsigned int getRate();
 
 private:

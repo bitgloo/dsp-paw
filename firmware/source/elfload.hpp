@@ -2,7 +2,7 @@
  * @file elfload.hpp
  * @brief Loads ELF binary data into memory for execution.
  *
- * Copyright (C) 2021 Clyne Sullivan
+ * Copyright (C) 2023 Clyne Sullivan
  *
  * Distributed under the GNU GPL v3 or later. You should have received a copy of
  * the GNU General Public License along with this program.
@@ -24,9 +24,26 @@ class ELFManager
 public:
     using EntryFunc = Sample *(*)(Sample *, size_t);
     
+    /**
+     * Attempts to parse the ELF binary loaded in the file buffer.
+     * Returns true if successful.
+     */
     static bool loadFromInternalBuffer();
+
+    /**
+     * Returns a function pointer to the loaded ELF's entry point.
+     * Returns nullptr if a valid ELF is not loaded.
+     */
     static EntryFunc loadedElf();
+
+    /**
+     * Returns the address of the ELF file buffer (copy ELF binary to here).
+     */
     static unsigned char *fileBuffer();
+
+    /**
+     * "Unloads" the loaded binary by invalidating the entry pointer.
+     */
     static void unload();
 
 private:

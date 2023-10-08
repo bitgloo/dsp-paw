@@ -2,7 +2,7 @@
  * @file elf.h
  * @brief Defines ELF binary format info.
  *
- * Free to use, written by Clyne Sullivan.
+ * Public domain, written by Clyne Sullivan.
  */
 
 #ifndef STMDSP_ELF_HPP

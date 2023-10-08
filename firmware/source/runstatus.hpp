@@ -1,5 +1,4 @@
 // Run status
-//
 enum class RunStatus : char
 {
     Idle = '1',

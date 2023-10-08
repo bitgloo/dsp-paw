@@ -2,7 +2,7 @@
  * @file conversion.hpp
  * @brief Manages algorithm application (converts input samples to output).
  *
- * Copyright (C) 2021 Clyne Sullivan
+ * Copyright (C) 2023 Clyne Sullivan
  *
  * Distributed under the GNU GPL v3 or later. You should have received a copy of
  * the GNU General Public License along with this program.
@@ -27,6 +27,10 @@ constexpr unsigned int CONVERSION_THREAD_STACK_SIZE =
 class ConversionManager
 {
 public:
+    /**
+     * Starts two threads: the privileged monitor thread and the unprivileged
+     * algorithm execution thread.
+     */
     static void begin();
 
     // Begins sample conversion.
