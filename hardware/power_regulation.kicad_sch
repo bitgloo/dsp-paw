@@ -1536,39 +1536,6 @@
     )
   )
 
-  (symbol (lib_id "power:VDDA") (at 228.6 133.35 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 69a0f71b-0607-484e-b263-de0bffc9a9b5)
-    (property "Reference" "#PWR013" (at 228.6 137.16 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VDDA" (at 228.6 128.27 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 228.6 133.35 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 228.6 133.35 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 28de77ff-87c7-4ee1-8a34-6eeb63355182))
-    (instances
-      (project "stmdsp_rev3"
-        (path "/975c3983-57e7-4e06-a697-831e5209dd80"
-          (reference "#PWR013") (unit 1)
-        )
-      )
-      (project "DSP PAW add-on board"
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/270d19d2-3af2-41db-ad1c-33373417ec82"
-          (reference "#PWR033") (unit 1)
-        )
-        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
-          (reference "#PWR039") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Connector:TestPoint") (at 219.71 133.35 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6c19d262-a0fe-4278-9e4c-98da07eea5c9)
@@ -2567,6 +2534,31 @@
         )
         (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
           (reference "#PWR038") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 228.6 133.35 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f4ee7e99-49af-474c-bce2-ac0545b534e4)
+    (property "Reference" "#PWR04" (at 228.6 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 227.965 128.27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 228.6 133.35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 228.6 133.35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0df77df3-0bfb-4a05-8d9f-8db16a3d4e8c))
+    (instances
+      (project "DSP PAW add-on board"
+        (path "/c291319b-d76e-4fda-91cc-061acff65f9f/97fc232a-dbc7-49da-a6a0-e33e9aacbabd"
+          (reference "#PWR04") (unit 1)
         )
       )
     )

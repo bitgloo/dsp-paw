@@ -57,8 +57,9 @@
       ],
       "drc_exclusions": [
         "lib_footprint_issues|147049125|88495000|d2aefee4-de29-456d-afff-5c2c101f4674|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|172056920|76359492|6e56ba3f-444a-46d5-a1a4-0a13bdcad72a|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|174000000|84500000|b094d6cc-194b-4f39-979a-d204c7caeddc|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|146968750|88495000|d2aefee4-de29-456d-afff-5c2c101f4674|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|172056920|73359492|183bd70a-f8ce-4ef3-852b-fdf2ed05d206|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|174000000|81500000|c08d313f-aa5c-4799-b949-9365c54481d0|00000000-0000-0000-0000-000000000000",
         "lib_footprint_mismatch|177600000|74900000|43bf6a24-f35b-46a4-974c-4c658f0c1038|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
@@ -123,7 +124,7 @@
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.19999999999999998,
         "min_microvia_drill": 0.09999999999999999,
-        "min_resolved_spokes": 2,
+        "min_resolved_spokes": 1,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
@@ -198,10 +199,9 @@
   },
   "erc": {
     "erc_exclusions": [
-      "power_pin_not_driven|1790700|520700|21545055-5b80-4ed0-9ac9-2935855f79d1|00000000-0000-0000-0000-000000000000|||",
-      "power_pin_not_driven|2006600|412750|d93ff3db-bdfb-4d71-83ae-9eb3adbc430b|00000000-0000-0000-0000-000000000000|||",
-      "power_pin_not_driven|2006600|565150|29f98b05-419f-47bf-9552-3973c7a0e813|00000000-0000-0000-0000-000000000000|||",
-      "power_pin_not_driven|495300|800100|21ee3a8d-bf35-4666-ac4c-16f93589011d|00000000-0000-0000-0000-000000000000|||"
+      "power_pin_not_driven|2184400|939800|a4e547a7-29d8-439d-b01e-1a601ce2877f|00000000-0000-0000-0000-000000000000|||",
+      "power_pin_not_driven|2387600|1104900|d93ff3db-bdfb-4d71-83ae-9eb3adbc430b|00000000-0000-0000-0000-000000000000|||",
+      "power_pin_not_driven|838200|660400|17dc7a2c-d6c1-4236-91fa-2b37d621dec2|00000000-0000-0000-0000-000000000000|||"
     ],
     "meta": {
       "version": 0
