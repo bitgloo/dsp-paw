@@ -156,6 +156,7 @@ void ConversionManager::threadRunner(void *)
                     samples = entry(samples, size);
                     asm("mov sp, %0" :: "r" (sp));
                     volatile auto testRead = *samples;
+                    (void)testRead;
                 } else {
                     // Start execution timer:
                     asm("mov %0, sp; eor r0, r0; svc 2" : "=r" (sp));
@@ -163,6 +164,7 @@ void ConversionManager::threadRunner(void *)
                     // Stop execution timer:
                     asm("mov r0, #1; svc 2; mov sp, %0" :: "r" (sp));
                     volatile auto testRead = *samples;
+                    (void)testRead;
                 } 
             }
 

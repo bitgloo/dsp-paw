@@ -29,7 +29,7 @@ class SampleBuffer
 {
 public:
     // Manage the sample data memory at 'buffer'.
-    SampleBuffer(Sample *buffer);
+    explicit SampleBuffer(Sample *buffer);
 
     /**
      * Fill the current buffer with midpoint (2048/0V) values.

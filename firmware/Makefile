@@ -162,10 +162,10 @@ INCDIR = $(CONFDIR) $(ALLINC) $(TESTINC) \
          source source/periph
 
 # Define C warning options here.
-CWARN = -Wall -Wextra -Wundef -Wstrict-prototypes -pedantic
+CWARN = -Wall -Wextra -Wundef -Wstrict-prototypes -pedantic -Werror
 
 # Define C++ warning options here.
-CPPWARN = -Wall -Wextra -Wundef -pedantic -Wno-volatile
+CPPWARN = -Wall -Wextra -Wundef -pedantic -Wno-volatile -Werror -Wconversion
 
 #
 # Project, target, sources and paths
@@ -217,6 +217,17 @@ include $(RULESPATH)/rules.mk
 # Custom rules
 #
 
+check:
+	cppcheck --std=c++17 --enable=warning,style,performance,portability --force $(shell find source/ -name "*.cpp" -or -name "*.hpp" -or -name "*.c" -or -name "*.h" -type f)
+
+tidy:
+	clang-tidy \
+		-warnings-as-errors=* \
+		--extra-arg=-I --extra-arg=/usr/lib/gcc/arm-none-eabi/13/include/g++-v13 \
+		--extra-arg=-I --extra-arg=/usr/lib/gcc/arm-none-eabi/13/include/g++-v13/arm-none-eabi \
+		$(CPPSRC)
+
 #
 # Custom rules
 ##############################################################################
+

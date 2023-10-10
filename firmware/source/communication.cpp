@@ -223,7 +223,7 @@ void sampleRate(unsigned char *cmd)
 {
     if (EM.assert(USBSerial::read(&cmd[1], 1) == 1, Error::BadParamSize)) {
         if (cmd[1] == 0xFF) {
-            unsigned char r = SClock::getRate();
+            auto r = static_cast<unsigned char>(SClock::getRate());
             USBSerial::write(&r, 1);
         } else {
             auto r = static_cast<SClock::Rate>(cmd[1]);
